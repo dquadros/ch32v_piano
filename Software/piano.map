@@ -1,0 +1,482 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../ch32fun/../misc/libgcc.a(div.o)
+                              /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o (__divsi3)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .data          0x0000000000000000        0x0 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .bss           0x0000000000000000        0x0 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.mini_pad
+                0x0000000000000000       0x84 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text._puts    0x0000000000000000       0x42 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.mini_itoa.part.0
+                0x0000000000000000       0xca /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.internal_handle_input.constprop.0
+                0x0000000000000000        0xa /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text._write.constprop.0
+                0x0000000000000000       0xf4 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.__puts_uart
+                0x0000000000000000       0x1a /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.strlen   0x0000000000000000       0x12 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.mini_vpprintf
+                0x0000000000000000      0x1c6 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.printf   0x0000000000000000       0x30 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.vprintf  0x0000000000000000       0x16 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.mini_vsnprintf
+                0x0000000000000000       0x3a /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.snprintf
+                0x0000000000000000       0x1c /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.sprintf  0x0000000000000000       0x28 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.memset   0x0000000000000000       0x12 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.strcpy   0x0000000000000000       0x14 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.strncpy  0x0000000000000000       0x1c /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.strcmp   0x0000000000000000       0x1a /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.strncmp  0x0000000000000000       0x2e /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.strchr   0x0000000000000000       0x16 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.strrchr  0x0000000000000000       0x3c /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.memcpy   0x0000000000000000       0x1c /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.memcmp   0x0000000000000000       0x26 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.memmove  0x0000000000000000       0x5e /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.memchr   0x0000000000000000       0x1c /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.strnlen  0x0000000000000000       0x2a /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.twoway_strstr
+                0x0000000000000000      0x236 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.strstr   0x0000000000000000      0x140 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .rodata.puts.str1.4
+                0x0000000000000000        0x2 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.puts     0x0000000000000000       0x40 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.putchar  0x0000000000000000       0x72 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .data.ADCPrescTable.lto_priv.0
+                0x0000000000000000       0x14 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .data.ADCPrescTable.lto_priv.1
+                0x0000000000000000       0x14 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .data.APBAHBPrescTable.lto_priv.0
+                0x0000000000000000       0x10 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .data.APBAHBPrescTable.lto_priv.1
+                0x0000000000000000       0x10 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .comment       0x0000000000000000       0x10 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .comment       0x0000000000000000       0x10 /tmp/ccDySOIr.debug.temp.o
+ .comment       0x0000000000000000       0x10 /tmp/ccdBsPRi.debug.temp.o
+ .data          0x0000000000000000        0x0 ../../ch32fun/../misc/libgcc.a(div.o)
+ .bss           0x0000000000000000        0x0 ../../ch32fun/../misc/libgcc.a(div.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000000000000 0x0000000000004000 xr
+RAM              0x0000000020000000 0x0000000000001000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /tmp/ccyaAANL.o
+LOAD /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+LOAD /tmp/ccDySOIr.debug.temp.o
+LOAD /tmp/ccdBsPRi.debug.temp.o
+LOAD /tmp/ccG8dgWz.o
+LOAD ../../ch32fun/../misc/libgcc.a
+LOAD ../../ch32fun/../misc/libgcc.a
+
+.init           0x0000000000000000       0xa8
+                0x0000000000000000                _sinit = .
+                0x0000000000000000                . = ALIGN (0x4)
+ *(SORT_NONE(.init))
+ .init          0x0000000000000000       0xa6 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+                0x0000000000000000                InterruptVector
+                0x00000000000000a8                . = ALIGN (0x4)
+ *fill*         0x00000000000000a6        0x2 
+                0x00000000000000a8                _einit = .
+
+.text           0x00000000000000a8      0x570
+                0x00000000000000a8                . = ALIGN (0x4)
+ *(.text)
+ .text          0x00000000000000a8       0x7e ../../ch32fun/../misc/libgcc.a(div.o)
+                0x00000000000000a8                __divsi3
+                0x00000000000000b0                __hidden___udivsi3
+                0x00000000000000b0                __udivsi3
+                0x00000000000000dc                __umodsi3
+                0x0000000000000100                __modsi3
+ *(.text.*)
+ .text.PrintHex
+                0x0000000000000126       0x56 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.DelaySysTick
+                0x000000000000017c       0x16 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.toca_nota
+                0x0000000000000192       0x3c /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.para_nota
+                0x00000000000001ce       0x30 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.adc_get  0x00000000000001fe       0x26 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.le_adc_media
+                0x0000000000000224       0x62 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.le_tecla
+                0x0000000000000286       0x26 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.ajusta_notas
+                0x00000000000002ac       0x5e /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .text.handle_reset
+                0x000000000000030a       0x70 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+                0x000000000000030a                handle_reset
+ .text.vector_handler
+                0x000000000000037a       0x5a /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+                0x000000000000037a                OPCM_IRQHandler
+                0x000000000000037a                EXTI2_IRQHandler
+                0x000000000000037a                TIM8_TRG_COM_IRQHandler
+                0x000000000000037a                TIM8_CC_IRQHandler
+                0x000000000000037a                USART_WKUP_IRQHandler
+                0x000000000000037a                UART8_IRQHandler
+                0x000000000000037a                SPI4_IRQHandler
+                0x000000000000037a                NFC_IRQHandler
+                0x000000000000037a                DFSDM0_IRQHandler
+                0x000000000000037a                TIM1_CC_IRQHandler
+                0x000000000000037a                HardFault_Handler
+                0x000000000000037a                TIM10_IRQHandler
+                0x000000000000037a                GPIOB_IRQHandler
+                0x000000000000037a                IPC_CH2_Handler
+                0x000000000000037a                USBPD_IRQHandler
+                0x000000000000037a                TIM6_IRQHandler
+                0x000000000000037a                GPIOA_IRQHandler
+                0x000000000000037a                SysTick_Handler
+                0x000000000000037a                CAN3_RX1_IRQHandler
+                0x000000000000037a                I3C_ER_IRQHandler
+                0x000000000000037a                PVD_IRQHandler
+                0x000000000000037a                SDIO_IRQHandler
+                0x000000000000037a                TIM9_BRK_IRQHandler
+                0x000000000000037a                DMA2_Channel8_IRQHandler
+                0x000000000000037a                CAN2_RX1_IRQHandler
+                0x000000000000037a                EXTI3_IRQHandler
+                0x000000000000037a                HSEM_Handler
+                0x000000000000037a                UART1_IRQHandler
+                0x000000000000037a                USBHS_IRQHandler
+                0x000000000000037a                LPTIM2_IRQHandler
+                0x000000000000037a                DMA2_Channel9_IRQHandler
+                0x000000000000037a                TIM10_CC_IRQHandler
+                0x000000000000037a                EXTI25_16_IRQHandler
+                0x000000000000037a                I2C3_ER_IRQHandler
+                0x000000000000037a                USBFS_IRQHandler
+                0x000000000000037a                UART0_IRQHandler
+                0x000000000000037a                USART8_IRQHandler
+                0x000000000000037a                EXTI0_IRQHandler
+                0x000000000000037a                I2C2_EV_IRQHandler
+                0x000000000000037a                TIM10_TRG_COM_IRQHandler
+                0x000000000000037a                LPTIM_IRQHandler
+                0x000000000000037a                CAN1_RX0_IRQHandler
+                0x000000000000037a                CAN3_SCE_IRQHandler
+                0x000000000000037a                CAN2_SCE_IRQHandler
+                0x000000000000037a                ADC1_2_IRQHandler
+                0x000000000000037a                BB_IRQHandler
+                0x000000000000037a                Break_Point_Handler
+                0x000000000000037a                IPC_CH0_Handler
+                0x000000000000037a                TIM2_CC_IRQHandler
+                0x000000000000037a                SPI1_IRQHandler
+                0x000000000000037a                USART5_IRQHandler
+                0x000000000000037a                TAMPER_IRQHandler
+                0x000000000000037a                TMR0_IRQHandler
+                0x000000000000037a                AWU_IRQHandler
+                0x000000000000037a                EXTI7_0_IRQHandler
+                0x000000000000037a                CAN2_RX0_IRQHandler
+                0x000000000000037a                OSCWakeUp_IRQHandler
+                0x000000000000037a                TIM8_UP_IRQHandler
+                0x000000000000037a                Ecall_M_Mode_Handler
+                0x000000000000037a                ECDC_IRQHandler
+                0x000000000000037a                SDMMC_IRQHandler
+                0x000000000000037a                USART7_IRQHandler
+                0x000000000000037a                DMA2_Channel2_IRQHandler
+                0x000000000000037a                DMA1_Channel4_IRQHandler
+                0x000000000000037a                ADC1_IRQHandler
+                0x000000000000037a                TIM2_BRK_IRQHandler
+                0x000000000000037a                USART6_IRQHandler
+                0x000000000000037a                CAN3_RX0_IRQHandler
+                0x000000000000037a                HSADC_IRQHandler
+                0x000000000000037a                TIM9_UP_IRQHandler
+                0x000000000000037a                USART3_IRQHandler
+                0x000000000000037a                RTC_IRQHandler
+                0x000000000000037a                DMA1_Channel7_IRQHandler
+                0x000000000000037a                LED_IRQHandler
+                0x000000000000037a                CAN1_RX1_IRQHandler
+                0x000000000000037a                DVP_IRQHandler
+                0x000000000000037a                UART5_IRQHandler
+                0x000000000000037a                USBSS_IRQHandler
+                0x000000000000037a                SWPMI_IRQHandler
+                0x000000000000037a                USBPDWakeUp_IRQHandler
+                0x000000000000037a                EXTI15_8_IRQHandler
+                0x000000000000037a                TIM4_IRQHandler
+                0x000000000000037a                DMA2_Channel1_IRQHandler
+                0x000000000000037a                SWPMI_WKUP_IRQHandler
+                0x000000000000037a                USBPD_WKUP_IRQHandler
+                0x000000000000037a                I2C1_EV_IRQHandler
+                0x000000000000037a                USBSSWakeup_IRQHandler
+                0x000000000000037a                UART2_IRQHandler
+                0x000000000000037a                USART4_IRQHandler
+                0x000000000000037a                PWMX_IRQHandler
+                0x000000000000037a                DMA1_Channel6_IRQHandler
+                0x000000000000037a                UART4_IRQHandler
+                0x000000000000037a                DMA2_Channel4_IRQHandler
+                0x000000000000037a                TIM3_IRQHandler
+                0x000000000000037a                RCC_IRQHandler
+                0x000000000000037a                TIM1_TRG_COM_IRQHandler
+                0x000000000000037a                DMA1_Channel1_IRQHandler
+                0x000000000000037a                DMA2_Channel7_IRQHandler
+                0x000000000000037a                QSPI1_IRQHandler
+                0x000000000000037a                EXTI15_10_IRQHandler
+                0x000000000000037a                ADC_IRQHandler
+                0x000000000000037a                IPC_CH3_Handler
+                0x000000000000037a                DMA1_Channel8_IRQHandler
+                0x000000000000037a                I3C_EV_IRQHandler
+                0x000000000000037a                TMR2_IRQHandler
+                0x000000000000037a                I3C_WKUP_IRQHandler
+                0x000000000000037a                DefaultIRQHandler
+                0x000000000000037a                TIM12_IRQHandler
+                0x000000000000037a                TIM7_IRQHandler
+                0x000000000000037a                CAN2_TX_IRQHandler
+                0x000000000000037a                TIM5_IRQHandler
+                0x000000000000037a                I2C3_EV_IRQHandler
+                0x000000000000037a                USB_IRQHandler
+                0x000000000000037a                EXTI9_5_IRQHandler
+                0x000000000000037a                PIOC_IRQHandler
+                0x000000000000037a                TIM9_IRQHandler
+                0x000000000000037a                LTDC_IRQHandler
+                0x000000000000037a                SAI_IRQHandler
+                0x000000000000037a                SPI2_IRQHandler
+                0x000000000000037a                OSC32KCal_IRQHandler
+                0x000000000000037a                IPC_CH1_Handler
+                0x000000000000037a                I2C_IRQHandler
+                0x000000000000037a                LPTIM1_WKUP_IRQHandler
+                0x000000000000037a                TIM10_BRK_IRQHandler
+                0x000000000000037a                TIM9_CC_IRQHandler
+                0x000000000000037a                CAN1_TX_IRQHandler
+                0x000000000000037a                DMA2_Channel5_IRQHandler
+                0x000000000000037a                USB2_IRQHandler
+                0x000000000000037a                USBHSWakeUp_IRQHandler
+                0x000000000000037a                DMA1_Channel5_IRQHandler
+                0x000000000000037a                EXTI4_IRQHandler
+                0x000000000000037a                USB_LP_CAN1_RX0_IRQHandler
+                0x000000000000037a                QSPI2_IRQHandler
+                0x000000000000037a                RNG_IRQHandler
+                0x000000000000037a                USB_HP_CAN1_TX_IRQHandler
+                0x000000000000037a                LLE_IRQHandler
+                0x000000000000037a                CMPWakeUp_IRQHandler
+                0x000000000000037a                DMA1_Channel3_IRQHandler
+                0x000000000000037a                FSMC_IRQHandler
+                0x000000000000037a                ETH_IRQHandler
+                0x000000000000037a                TIM1_UP_IRQHandler
+                0x000000000000037a                LPTIMWakeUp_IRQHandler
+                0x000000000000037a                WWDG_IRQHandler
+                0x000000000000037a                USBHSWakeup_IRQHandler
+                0x000000000000037a                DMA2_Channel11_IRQHandler
+                0x000000000000037a                WDOG_BAT_IRQHandler
+                0x000000000000037a                Ecall_U_Mode_Handler
+                0x000000000000037a                I2C4_EV_IRQHandler
+                0x000000000000037a                CAN3_TX_IRQHandler
+                0x000000000000037a                TMR3_IRQHandler
+                0x000000000000037a                DMA2_Channel6_IRQHandler
+                0x000000000000037a                TIM2_IRQHandler
+                0x000000000000037a                SW_Handler
+                0x000000000000037a                TIM1_BRK_IRQHandler
+                0x000000000000037a                GPHA_IRQHandler
+                0x000000000000037a                OPA_IRQHandler
+                0x000000000000037a                DMA2_Channel10_IRQHandler
+                0x000000000000037a                EXTI1_IRQHandler
+                0x000000000000037a                SPI0_IRQHandler
+                0x000000000000037a                USB2_HOST_IRQHandler
+                0x000000000000037a                LPTIM2_WKUP_IRQHandler
+                0x000000000000037a                RTCAlarm_IRQHandler
+                0x000000000000037a                TIM11_IRQHandler
+                0x000000000000037a                TIM10_UP_IRQHandler
+                0x000000000000037a                TIM9_TRG_COM_IRQHandler
+                0x000000000000037a                UART7_IRQHandler
+                0x000000000000037a                USART2_IRQHandler
+                0x000000000000037a                UART6_IRQHandler
+                0x000000000000037a                UHSIF_IRQHandler
+                0x000000000000037a                ETHWakeUp_IRQHandler
+                0x000000000000037a                I2C2_ER_IRQHandler
+                0x000000000000037a                DMA1_Channel2_IRQHandler
+                0x000000000000037a                TIM8_BRK_IRQHandler
+                0x000000000000037a                TIM2_TRG_IRQHandler
+                0x000000000000037a                CAN1_SCE_IRQHandler
+                0x000000000000037a                FLASH_IRQHandler
+                0x000000000000037a                USBFSWakeUp_IRQHandler
+                0x000000000000037a                USART1_IRQHandler
+                0x000000000000037a                OTG_FS_IRQHandler
+                0x000000000000037a                SPI3_IRQHandler
+                0x000000000000037a                USBFS_WakeUp_IRQHandler
+                0x000000000000037a                UART3_IRQHandler
+                0x000000000000037a                I2C1_ER_IRQHandler
+                0x000000000000037a                FMC_IRQHandler
+                0x000000000000037a                USB2_DEVICE_IRQHandler
+                0x000000000000037a                LPTIM1_IRQHandler
+                0x000000000000037a                DFSDM1_IRQHandler
+                0x000000000000037a                TMR1_IRQHandler
+                0x000000000000037a                I2C4_ER_IRQHandler
+                0x000000000000037a                SERDES_IRQHandler
+                0x000000000000037a                USBSS_LINK_IRQHandler
+                0x000000000000037a                USBWakeUp_IRQHandler
+                0x000000000000037a                DMA2_Channel3_IRQHandler
+                0x00000000000003c6                NMI_Handler
+                0x00000000000003c6                NMI_RCC_CSS_IRQHandler
+ .text.SystemInit
+                0x00000000000003d4       0x58 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+                0x00000000000003d4                SystemInit
+ .text.startup.main
+                0x000000000000042c      0x1ca /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+                0x000000000000042c                main
+ *(.rodata)
+ *(.rodata*)
+ *fill*         0x00000000000005f6        0x2 
+ .rodata.NOTAS_DEFAULT
+                0x00000000000005f8        0xe /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ *fill*         0x0000000000000606        0x2 
+ .rodata.limiar
+                0x0000000000000608        0xe /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ *(.gnu.linkonce.t.*)
+                0x0000000000000618                . = ALIGN (0x4)
+ *fill*         0x0000000000000616        0x2 
+
+.rela.dyn       0x0000000000000618        0x0
+ .rela.text.handle_reset
+                0x0000000000000618        0x0 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+
+.fini           0x0000000000000618        0x0
+ *(SORT_NONE(.fini))
+                0x0000000000000618                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_etext = .)
+                [!provide]                        PROVIDE (_eitcm = .)
+
+.preinit_array  0x0000000000000618        0x0
+                [!provide]                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = .)
+
+.init_array     0x0000000000000618        0x0
+                0x0000000000000618                PROVIDE (__init_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
+ *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
+                0x0000000000000618                PROVIDE (__init_array_end = .)
+
+.fini_array     0x0000000000000618        0x0
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
+ *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+
+.dalign         0x0000000020000000        0x0 load address 0x0000000000000618
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                PROVIDE (_data_vma = .)
+
+.dlalign        0x0000000000000618        0x0
+                0x0000000000000618                . = ALIGN (0x4)
+                0x0000000000000618                PROVIDE (_data_lma = .)
+
+.data           0x0000000020000000        0x0 load address 0x0000000000000618
+                0x0000000020000000                . = ALIGN (0x4)
+                0x00000000200003fc                __global_pointer$ = (. + 0x3fc)
+ *(.gnu.linkonce.r.*)
+ *(.data .data.*)
+ *(.gnu.linkonce.d.*)
+                0x0000000020000000                . = ALIGN (0x8)
+ *(.sdata .sdata.*)
+ *(.sdata2*)
+ *(.gnu.linkonce.s.*)
+                0x0000000020000000                . = ALIGN (0x8)
+ *(.srodata.cst16)
+ *(.srodata.cst8)
+ *(.srodata.cst4)
+ *(.srodata.cst2)
+ *(.srodata .srodata.*)
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                PROVIDE (_edata = .)
+
+.bss            0x0000000020000000       0x10 load address 0x0000000000000618
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                PROVIDE (_sbss = .)
+ *(.sbss*)
+ *(.gnu.linkonce.sb.*)
+ *(.bss*)
+ .bss.NOTAS     0x0000000020000000        0xe /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ *(.gnu.linkonce.b.*)
+ *(COMMON*)
+                0x0000000020000010                . = ALIGN (0x4)
+ *fill*         0x000000002000000e        0x2 
+                0x0000000020000010                PROVIDE (_ebss = .)
+                [!provide]                        PROVIDE (_end = _ebss)
+                [!provide]                        PROVIDE (end = .)
+                0x0000000020001000                PROVIDE (_eusrstack = (ORIGIN (RAM) + LENGTH (RAM)))
+
+/DISCARD/
+ *(.note .note.*)
+ *(.eh_frame .eh_frame.*)
+ *(.comment .comment.*)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ *(.ARM.exidx*)
+OUTPUT(piano.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x0000000000000000       0x25
+ .riscv.attributes
+                0x0000000000000000       0x25 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .riscv.attributes
+                0x0000000000000025       0x1f ../../ch32fun/../misc/libgcc.a(div.o)
+
+.debug_info     0x0000000000000000     0x30f5
+ .debug_info    0x0000000000000000     0x12cd /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .debug_info    0x00000000000012cd     0x150c /tmp/ccDySOIr.debug.temp.o
+                0x00000000000012cd                ch32fun.c.54e3fe9e
+ .debug_info    0x00000000000027d9      0x8bf /tmp/ccdBsPRi.debug.temp.o
+                0x00000000000027d9                piano.c.9b0a1975
+ .debug_info    0x0000000000003098       0x5d ../../ch32fun/../misc/libgcc.a(div.o)
+
+.debug_abbrev   0x0000000000000000      0x69e
+ .debug_abbrev  0x0000000000000000      0x1a7 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .debug_abbrev  0x00000000000001a7      0x2c2 /tmp/ccDySOIr.debug.temp.o
+ .debug_abbrev  0x0000000000000469      0x20d /tmp/ccdBsPRi.debug.temp.o
+ .debug_abbrev  0x0000000000000676       0x28 ../../ch32fun/../misc/libgcc.a(div.o)
+
+.debug_loc      0x0000000000000000     0x2434
+ .debug_loc     0x0000000000000000     0x2434 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+
+.debug_aranges  0x0000000000000000      0x190
+ .debug_aranges
+                0x0000000000000000      0x170 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .debug_aranges
+                0x0000000000000170       0x20 ../../ch32fun/../misc/libgcc.a(div.o)
+
+.debug_ranges   0x0000000000000000      0x3d8
+ .debug_ranges  0x0000000000000000      0x3d8 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+
+.debug_line     0x0000000000000000     0x321a
+ .debug_line    0x0000000000000000     0x2f19 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+ .debug_line    0x0000000000002f19      0x112 /tmp/ccDySOIr.debug.temp.o
+ .debug_line    0x000000000000302b       0x9c /tmp/ccdBsPRi.debug.temp.o
+ .debug_line    0x00000000000030c7      0x153 ../../ch32fun/../misc/libgcc.a(div.o)
+
+.debug_str      0x0000000000000000      0xd69
+ .debug_str     0x0000000000000000      0x171 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+                                        0x189 (size before relaxing)
+ .debug_str     0x0000000000000171      0x726 /tmp/ccDySOIr.debug.temp.o
+                                        0x84d (size before relaxing)
+ .debug_str     0x0000000000000897      0x416 /tmp/ccdBsPRi.debug.temp.o
+                                        0x74f (size before relaxing)
+ .debug_str     0x0000000000000cad       0xbc ../../ch32fun/../misc/libgcc.a(div.o)
+                                         0xd9 (size before relaxing)
+
+.debug_frame    0x0000000000000000      0x424
+ .debug_frame   0x0000000000000000      0x424 /tmp/piano.elf.d8Y0oq.ltrans0.ltrans.o
+
+.debug_line_str
+                0x0000000000000000       0x92
+ .debug_line_str
+                0x0000000000000000       0x92 ../../ch32fun/../misc/libgcc.a(div.o)

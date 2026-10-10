@@ -1,0 +1,905 @@
+
+piano.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .init:
+
+00000000 <InterruptVector>:
+	void InterruptVectorDefault()  __attribute__((naked)) __attribute((section(".init"))) __attribute((naked));
+
+	void InterruptVectorDefault( void )
+	{
+		#if !defined(FUNCONF_TINYVECTOR) || !FUNCONF_TINYVECTOR
+			asm volatile( DEFAULT_INTERRUPT_VECTOR_CONTENTS );
+   0:	30a0006f          	j	30a <handle_reset>
+   4:	0000                	unimp
+   6:	0000                	unimp
+   8:	03c6                	slli	t2,t2,0x11
+   a:	0000                	unimp
+   c:	037a                	slli	t1,t1,0x1e
+	...
+  2e:	0000                	unimp
+  30:	037a                	slli	t1,t1,0x1e
+  32:	0000                	unimp
+  34:	0000                	unimp
+  36:	0000                	unimp
+  38:	037a                	slli	t1,t1,0x1e
+  3a:	0000                	unimp
+  3c:	0000                	unimp
+  3e:	0000                	unimp
+  40:	037a                	slli	t1,t1,0x1e
+  42:	0000                	unimp
+  44:	037a                	slli	t1,t1,0x1e
+  46:	0000                	unimp
+  48:	037a                	slli	t1,t1,0x1e
+  4a:	0000                	unimp
+  4c:	037a                	slli	t1,t1,0x1e
+  4e:	0000                	unimp
+  50:	037a                	slli	t1,t1,0x1e
+  52:	0000                	unimp
+  54:	037a                	slli	t1,t1,0x1e
+  56:	0000                	unimp
+  58:	037a                	slli	t1,t1,0x1e
+  5a:	0000                	unimp
+  5c:	037a                	slli	t1,t1,0x1e
+  5e:	0000                	unimp
+  60:	037a                	slli	t1,t1,0x1e
+  62:	0000                	unimp
+  64:	037a                	slli	t1,t1,0x1e
+  66:	0000                	unimp
+  68:	037a                	slli	t1,t1,0x1e
+  6a:	0000                	unimp
+  6c:	037a                	slli	t1,t1,0x1e
+  6e:	0000                	unimp
+  70:	037a                	slli	t1,t1,0x1e
+  72:	0000                	unimp
+  74:	037a                	slli	t1,t1,0x1e
+  76:	0000                	unimp
+  78:	037a                	slli	t1,t1,0x1e
+  7a:	0000                	unimp
+  7c:	037a                	slli	t1,t1,0x1e
+  7e:	0000                	unimp
+  80:	037a                	slli	t1,t1,0x1e
+  82:	0000                	unimp
+  84:	037a                	slli	t1,t1,0x1e
+  86:	0000                	unimp
+  88:	037a                	slli	t1,t1,0x1e
+  8a:	0000                	unimp
+  8c:	037a                	slli	t1,t1,0x1e
+  8e:	0000                	unimp
+  90:	037a                	slli	t1,t1,0x1e
+  92:	0000                	unimp
+  94:	037a                	slli	t1,t1,0x1e
+  96:	0000                	unimp
+  98:	037a                	slli	t1,t1,0x1e
+  9a:	0000                	unimp
+  9c:	037a                	slli	t1,t1,0x1e
+  9e:	0000                	unimp
+  a0:	037a                	slli	t1,t1,0x1e
+  a2:	0000                	unimp
+  a4:	0000                	unimp
+	...
+
+Disassembly of section .text:
+
+000000a8 <__divsi3>:
+  a8:	02054e63          	bltz	a0,e4 <__umodsi3+0x8>
+  ac:	0405c363          	bltz	a1,f2 <__umodsi3+0x16>
+
+000000b0 <__hidden___udivsi3>:
+  b0:	862e                	mv	a2,a1
+  b2:	85aa                	mv	a1,a0
+  b4:	557d                	li	a0,-1
+  b6:	c215                	beqz	a2,da <__hidden___udivsi3+0x2a>
+  b8:	4685                	li	a3,1
+  ba:	00b67863          	bgeu	a2,a1,ca <__hidden___udivsi3+0x1a>
+  be:	00c05663          	blez	a2,ca <__hidden___udivsi3+0x1a>
+  c2:	0606                	slli	a2,a2,0x1
+  c4:	0686                	slli	a3,a3,0x1
+  c6:	feb66ce3          	bltu	a2,a1,be <__hidden___udivsi3+0xe>
+  ca:	4501                	li	a0,0
+  cc:	00c5e463          	bltu	a1,a2,d4 <__hidden___udivsi3+0x24>
+  d0:	8d91                	sub	a1,a1,a2
+  d2:	8d55                	or	a0,a0,a3
+  d4:	8285                	srli	a3,a3,0x1
+  d6:	8205                	srli	a2,a2,0x1
+  d8:	faf5                	bnez	a3,cc <__hidden___udivsi3+0x1c>
+  da:	8082                	ret
+
+000000dc <__umodsi3>:
+  dc:	8286                	mv	t0,ra
+  de:	3fc9                	jal	b0 <__hidden___udivsi3>
+  e0:	852e                	mv	a0,a1
+  e2:	8282                	jr	t0
+  e4:	40a00533          	neg	a0,a0
+  e8:	00b04763          	bgtz	a1,f6 <__umodsi3+0x1a>
+  ec:	40b005b3          	neg	a1,a1
+  f0:	b7c1                	j	b0 <__hidden___udivsi3>
+  f2:	40b005b3          	neg	a1,a1
+  f6:	8286                	mv	t0,ra
+  f8:	3f65                	jal	b0 <__hidden___udivsi3>
+  fa:	40a00533          	neg	a0,a0
+  fe:	8282                	jr	t0
+
+00000100 <__modsi3>:
+ 100:	8286                	mv	t0,ra
+ 102:	0005c763          	bltz	a1,110 <__modsi3+0x10>
+ 106:	00054963          	bltz	a0,118 <__modsi3+0x18>
+ 10a:	375d                	jal	b0 <__hidden___udivsi3>
+ 10c:	852e                	mv	a0,a1
+ 10e:	8282                	jr	t0
+ 110:	40b005b3          	neg	a1,a1
+ 114:	fe055be3          	bgez	a0,10a <__modsi3+0xa>
+ 118:	40a00533          	neg	a0,a0
+ 11c:	3f51                	jal	b0 <__hidden___udivsi3>
+ 11e:	40b00533          	neg	a0,a1
+ 122:	8282                	jr	t0
+	...
+
+00000126 <PrintHex>:
+	while( (*DMDATA0) & 0x80 );
+ 126:	e0000737          	lui	a4,0xe0000
+ 12a:	0f472783          	lw	a5,244(a4) # e00000f4 <_eusrstack+0xbffff0f4>
+ 12e:	0807f793          	andi	a5,a5,128
+ 132:	ffe5                	bnez	a5,12a <PrintHex+0x4>
+	*DMDATA0 = 0x78302088; //" 0x"
+ 134:	783027b7          	lui	a5,0x78302
+ 138:	08878793          	addi	a5,a5,136 # 78302088 <_eusrstack+0x58301088>
+ 13c:	0ef72a23          	sw	a5,244(a4)
+		while( (*DMDATA0) & 0x80 );
+ 140:	e0000637          	lui	a2,0xe0000
+	for( shift = 28; shift >= 0; shift -= 4 )
+ 144:	4771                	li	a4,28
+		s += ( s < 10 ) ? '0' : ('a' - 10);
+ 146:	4325                	li	t1,9
+	for( shift = 28; shift >= 0; shift -= 4 )
+ 148:	55f1                	li	a1,-4
+		while( (*DMDATA0) & 0x80 );
+ 14a:	0f462783          	lw	a5,244(a2) # e00000f4 <_eusrstack+0xbffff0f4>
+ 14e:	0807f793          	andi	a5,a5,128
+ 152:	ffe5                	bnez	a5,14a <PrintHex+0x24>
+		int s = (n>>shift) & 0xf;
+ 154:	00e557b3          	srl	a5,a0,a4
+ 158:	00f7f693          	andi	a3,a5,15
+		s += ( s < 10 ) ? '0' : ('a' - 10);
+ 15c:	03000793          	li	a5,48
+ 160:	00d35463          	bge	t1,a3,168 <PrintHex+0x42>
+ 164:	05700793          	li	a5,87
+ 168:	97b6                	add	a5,a5,a3
+		*DMDATA0 = 0x85 | (s<<8); //" 0x"
+ 16a:	07a2                	slli	a5,a5,0x8
+ 16c:	0857e793          	ori	a5,a5,133
+ 170:	0ef62a23          	sw	a5,244(a2)
+	for( shift = 28; shift >= 0; shift -= 4 )
+ 174:	1771                	addi	a4,a4,-4
+ 176:	fcb71ae3          	bne	a4,a1,14a <PrintHex+0x24>
+}
+ 17a:	8082                	ret
+
+0000017c <DelaySysTick>:
+#endif
+
+void DelaySysTick( uint32_t n )
+{
+#if defined(CH32V003) || defined(CH32V00x)
+	uint32_t targend = SysTick->CNT + n;
+ 17c:	e000f7b7          	lui	a5,0xe000f
+ 180:	479c                	lw	a5,8(a5)
+	while( ((int32_t)( SysTick->CNT - targend )) < 0 );
+ 182:	e000f737          	lui	a4,0xe000f
+	uint32_t targend = SysTick->CNT + n;
+ 186:	953e                	add	a0,a0,a5
+	while( ((int32_t)( SysTick->CNT - targend )) < 0 );
+ 188:	471c                	lw	a5,8(a4)
+ 18a:	8f89                	sub	a5,a5,a0
+ 18c:	fe07cee3          	bltz	a5,188 <DelaySysTick+0xc>
+	uint64_t targend = SysTick->CNT - n;
+	while( ((int64_t)( SysTick->CNT - targend )) > 0 );
+#else
+	#error DelaySysTick not defined.
+#endif
+}
+ 190:	8082                	ret
+
+00000192 <toca_nota>:
+
+/*
+ * Inicia uma nota
+*/
+void toca_nota(int nota) {
+	TIM2->ATRLR = NOTAS[nota];
+ 192:	00151793          	slli	a5,a0,0x1
+ 196:	c0418513          	addi	a0,gp,-1020 # 20000000 <NOTAS>
+ 19a:	953e                	add	a0,a0,a5
+ 19c:	00055703          	lhu	a4,0(a0)
+ 1a0:	400007b7          	lui	a5,0x40000
+ 1a4:	02e79623          	sh	a4,44(a5) # 4000002c <_eusrstack+0x1ffff02c>
+	TIM2->CH2CVR = NOTAS[nota]/2;
+ 1a8:	8305                	srli	a4,a4,0x1
+ 1aa:	df98                	sw	a4,56(a5)
+	TIM2->CTLR1 |= TIM2_CTLR1_CEN;
+ 1ac:	0007d703          	lhu	a4,0(a5)
+ 1b0:	0742                	slli	a4,a4,0x10
+ 1b2:	8341                	srli	a4,a4,0x10
+ 1b4:	00176713          	ori	a4,a4,1
+ 1b8:	00e79023          	sh	a4,0(a5)
+	TIM2->SWEVGR |= TIM2_SWEVGR_UG;
+ 1bc:	0147d703          	lhu	a4,20(a5)
+ 1c0:	0742                	slli	a4,a4,0x10
+ 1c2:	8341                	srli	a4,a4,0x10
+ 1c4:	00176713          	ori	a4,a4,1
+ 1c8:	00e79a23          	sh	a4,20(a5)
+}
+ 1cc:	8082                	ret
+
+000001ce <para_nota>:
+
+/*
+  Para de tocar a nota atual
+*/
+void para_nota() {
+ 1ce:	1151                	addi	sp,sp,-12
+ 1d0:	c222                	sw	s0,4(sp)
+ 1d2:	c406                	sw	ra,8(sp)
+	TIM2->CH2CVR = 0; // para forçar LOW
+ 1d4:	40000437          	lui	s0,0x40000
+	Delay_Ms(1);
+ 1d8:	6505                	lui	a0,0x1
+	TIM2->CH2CVR = 0; // para forçar LOW
+ 1da:	02042c23          	sw	zero,56(s0) # 40000038 <_eusrstack+0x1ffff038>
+	Delay_Ms(1);
+ 1de:	77050513          	addi	a0,a0,1904 # 1770 <ch32fun.c.54e3fe9e+0x4a3>
+ 1e2:	3f69                	jal	17c <DelaySysTick>
+	TIM2->CTLR1 &= ~TIM2_CTLR1_CEN;
+ 1e4:	00045783          	lhu	a5,0(s0)
+}
+ 1e8:	40a2                	lw	ra,8(sp)
+	TIM2->CTLR1 &= ~TIM2_CTLR1_CEN;
+ 1ea:	07c2                	slli	a5,a5,0x10
+ 1ec:	83c1                	srli	a5,a5,0x10
+ 1ee:	9bf9                	andi	a5,a5,-2
+ 1f0:	07c2                	slli	a5,a5,0x10
+ 1f2:	83c1                	srli	a5,a5,0x10
+ 1f4:	00f41023          	sh	a5,0(s0)
+}
+ 1f8:	4412                	lw	s0,4(sp)
+ 1fa:	0131                	addi	sp,sp,12
+ 1fc:	8082                	ret
+
+000001fe <adc_get>:
+	Retorna valor de 0 a 2^12-1 (4095)
+*/
+uint16_t adc_get( void )
+{
+	// start sw conversion (auto clears)
+	ADC1->CTLR2 |= ADC_FLAG_STRT;
+ 1fe:	400127b7          	lui	a5,0x40012
+ 202:	4087a703          	lw	a4,1032(a5) # 40012408 <_eusrstack+0x20011408>
+ 206:	01076713          	ori	a4,a4,16
+ 20a:	40e7a423          	sw	a4,1032(a5)
+	
+	// wait for conversion complete
+	while(!(ADC1->STATR & ADC_EOC))
+ 20e:	40012737          	lui	a4,0x40012
+ 212:	40072783          	lw	a5,1024(a4) # 40012400 <_eusrstack+0x20011400>
+ 216:	8b89                	andi	a5,a5,2
+ 218:	dfed                	beqz	a5,212 <adc_get+0x14>
+		;
+	
+	// get result
+	return ADC1->RDATAR;
+ 21a:	44c72503          	lw	a0,1100(a4)
+}
+ 21e:	0542                	slli	a0,a0,0x10
+ 220:	8141                	srli	a0,a0,0x10
+ 222:	8082                	ret
+
+00000224 <le_adc_media>:
+		return b-a;
+	}
+}
+
+// Retorna a media de NLEITURAS do ADC
+uint16_t le_adc_media() {
+ 224:	1141                	addi	sp,sp,-16
+ 226:	c606                	sw	ra,12(sp)
+ 228:	c422                	sw	s0,8(sp)
+ 22a:	c226                	sw	s1,4(sp)
+  // Passo 1 - aguarda estabilizar
+	uint16_t anterior = adc_get();
+ 22c:	3fc9                	jal	1fe <adc_get>
+ 22e:	842a                	mv	s0,a0
+	Delay_Ms(10);
+ 230:	653d                	lui	a0,0xf
+ 232:	a6050513          	addi	a0,a0,-1440 # ea60 <piano.c.9b0a1975+0xc287>
+ 236:	3799                	jal	17c <DelaySysTick>
+	uint16_t atual  = adc_get();
+ 238:	37d9                	jal	1fe <adc_get>
+ 23a:	84aa                	mv	s1,a0
+	if (a > b) {
+ 23c:	0484f263          	bgeu	s1,s0,280 <le_adc_media+0x5c>
+		return a-b;
+ 240:	8c05                	sub	s0,s0,s1
+		return b-a;
+ 242:	0442                	slli	s0,s0,0x10
+ 244:	8041                	srli	s0,s0,0x10
+	while (absdif(anterior, atual) > 15) {
+ 246:	47bd                	li	a5,15
+ 248:	0287e263          	bltu	a5,s0,26c <le_adc_media+0x48>
+ 24c:	4495                	li	s1,5
+		anterior = atual;
+		atual  = adc_get();
+		Delay_Ms(10);
+	}
+	// Passo 2 - calcula a media
+	int soma = 0;
+ 24e:	4401                	li	s0,0
+	for (int i = 0; i < NLEITURAS; i++) {
+		soma += adc_get();
+ 250:	377d                	jal	1fe <adc_get>
+	for (int i = 0; i < NLEITURAS; i++) {
+ 252:	14fd                	addi	s1,s1,-1
+		soma += adc_get();
+ 254:	942a                	add	s0,s0,a0
+	for (int i = 0; i < NLEITURAS; i++) {
+ 256:	fced                	bnez	s1,250 <le_adc_media+0x2c>
+	}
+	return (uint16_t) (soma / NLEITURAS);
+ 258:	8522                	mv	a0,s0
+ 25a:	4595                	li	a1,5
+ 25c:	35b1                	jal	a8 <__divsi3>
+}
+ 25e:	40b2                	lw	ra,12(sp)
+ 260:	4422                	lw	s0,8(sp)
+ 262:	0542                	slli	a0,a0,0x10
+ 264:	4492                	lw	s1,4(sp)
+ 266:	8141                	srli	a0,a0,0x10
+ 268:	0141                	addi	sp,sp,16
+ 26a:	8082                	ret
+		atual  = adc_get();
+ 26c:	3f49                	jal	1fe <adc_get>
+ 26e:	c02a                	sw	a0,0(sp)
+		Delay_Ms(10);
+ 270:	653d                	lui	a0,0xf
+ 272:	a6050513          	addi	a0,a0,-1440 # ea60 <piano.c.9b0a1975+0xc287>
+ 276:	3719                	jal	17c <DelaySysTick>
+		atual  = adc_get();
+ 278:	4782                	lw	a5,0(sp)
+		Delay_Ms(10);
+ 27a:	8426                	mv	s0,s1
+		atual  = adc_get();
+ 27c:	84be                	mv	s1,a5
+ 27e:	bf7d                	j	23c <le_adc_media+0x18>
+		return b-a;
+ 280:	40848433          	sub	s0,s1,s0
+ 284:	bf7d                	j	242 <le_adc_media+0x1e>
+
+00000286 <le_tecla>:
+
+
+/*
+Determina qual tecla está apertada (0 a 7, 0 = nenhuma)
+*/
+int le_tecla() {
+ 286:	1151                	addi	sp,sp,-12
+ 288:	c406                	sw	ra,8(sp)
+	uint16_t leitura = le_adc_media();
+ 28a:	3f69                	jal	224 <le_adc_media>
+ 28c:	872a                	mv	a4,a0
+
+	// determina a tecla correspondente a leitura
+	for (int i = 0; i < 7; i++) {
+ 28e:	60800793          	li	a5,1544
+ 292:	4501                	li	a0,0
+ 294:	469d                	li	a3,7
+		if (leitura > limiar[i]) {
+ 296:	0007d603          	lhu	a2,0(a5)
+ 29a:	00e66663          	bltu	a2,a4,2a6 <le_tecla+0x20>
+	for (int i = 0; i < 7; i++) {
+ 29e:	0505                	addi	a0,a0,1
+ 2a0:	0789                	addi	a5,a5,2
+ 2a2:	fed51ae3          	bne	a0,a3,296 <le_tecla+0x10>
+			return i;
+		}
+	}
+	return 7;
+}
+ 2a6:	40a2                	lw	ra,8(sp)
+ 2a8:	0131                	addi	sp,sp,12
+ 2aa:	8082                	ret
+
+000002ac <ajusta_notas>:
+
+/*
+Ajusta as notas conforme a leitura do trimpot de calibração
+*/
+void ajusta_notas() {
+ 2ac:	1151                	addi	sp,sp,-12
+	ADC1->RSQR3 = canal;	// 0-9 for 8 ext inputs and two internals
+ 2ae:	400127b7          	lui	a5,0x40012
+void ajusta_notas() {
+ 2b2:	c406                	sw	ra,8(sp)
+	ADC1->RSQR3 = canal;	// 0-9 for 8 ext inputs and two internals
+ 2b4:	4705                	li	a4,1
+	Delay_Ms(10);
+ 2b6:	653d                	lui	a0,0xf
+	ADC1->RSQR3 = canal;	// 0-9 for 8 ext inputs and two internals
+ 2b8:	42e7aa23          	sw	a4,1076(a5) # 40012434 <_eusrstack+0x20011434>
+	Delay_Ms(10);
+ 2bc:	a6050513          	addi	a0,a0,-1440 # ea60 <piano.c.9b0a1975+0xc287>
+ 2c0:	3d75                	jal	17c <DelaySysTick>
+	adc_get();  // despreza a primeira leitura após mudar de canal
+ 2c2:	3f35                	jal	1fe <adc_get>
+	sel_adc_channel(1);   // trimpot de calibração
+	uint16_t trimpot = le_adc_media();  // 0 a 4095
+ 2c4:	3785                	jal	224 <le_adc_media>
+	int16_t ajuste =  (trimpot >> 5) - 64;
+ 2c6:	8115                	srli	a0,a0,0x5
+ 2c8:	fc050513          	addi	a0,a0,-64
+ 2cc:	0542                	slli	a0,a0,0x10
+ 2ce:	8141                	srli	a0,a0,0x10
+ 2d0:	4781                	li	a5,0
+	for (int i = 0; i < 7; i++) {
+		NOTAS[i] = NOTAS_DEFAULT[i] + ajuste;
+ 2d2:	c0418613          	addi	a2,gp,-1020 # 20000000 <NOTAS>
+ 2d6:	5f800693          	li	a3,1528
+	for (int i = 0; i < 7; i++) {
+ 2da:	45b9                	li	a1,14
+		NOTAS[i] = NOTAS_DEFAULT[i] + ajuste;
+ 2dc:	00f68733          	add	a4,a3,a5
+ 2e0:	00075703          	lhu	a4,0(a4)
+ 2e4:	00f60333          	add	t1,a2,a5
+	for (int i = 0; i < 7; i++) {
+ 2e8:	0789                	addi	a5,a5,2
+		NOTAS[i] = NOTAS_DEFAULT[i] + ajuste;
+ 2ea:	972a                	add	a4,a4,a0
+ 2ec:	00e31023          	sh	a4,0(t1)
+	for (int i = 0; i < 7; i++) {
+ 2f0:	feb796e3          	bne	a5,a1,2dc <ajusta_notas+0x30>
+	ADC1->RSQR3 = canal;	// 0-9 for 8 ext inputs and two internals
+ 2f4:	400127b7          	lui	a5,0x40012
+	Delay_Ms(10);
+ 2f8:	653d                	lui	a0,0xf
+	ADC1->RSQR3 = canal;	// 0-9 for 8 ext inputs and two internals
+ 2fa:	4207aa23          	sw	zero,1076(a5) # 40012434 <_eusrstack+0x20011434>
+	Delay_Ms(10);
+ 2fe:	a6050513          	addi	a0,a0,-1440 # ea60 <piano.c.9b0a1975+0xc287>
+ 302:	3dad                	jal	17c <DelaySysTick>
+	}
+	sel_adc_channel(0);   // Leitura de tecla
+}
+ 304:	40a2                	lw	ra,8(sp)
+ 306:	0131                	addi	sp,sp,12
+	adc_get();  // despreza a primeira leitura após mudar de canal
+ 308:	bddd                	j	1fe <adc_get>
+
+0000030a <handle_reset>:
+	asm volatile( "\n\
+ 30a:	20000197          	auipc	gp,0x20000
+ 30e:	0f218193          	addi	gp,gp,242 # 200003fc <__global_pointer$>
+ 312:	20001117          	auipc	sp,0x20001
+ 316:	cee10113          	addi	sp,sp,-786 # 20001000 <_eusrstack>
+ 31a:	6509                	lui	a0,0x2
+ 31c:	88050513          	addi	a0,a0,-1920 # 1880 <ch32fun.c.54e3fe9e+0x5b3>
+ 320:	30051073          	csrw	mstatus,a0
+ 324:	00000697          	auipc	a3,0x0
+ 328:	cdc68693          	addi	a3,a3,-804 # 0 <InterruptVector>
+ 32c:	0036e693          	ori	a3,a3,3
+ 330:	30569073          	csrw	mtvec,a3
+asm volatile(
+ 334:	c0418513          	addi	a0,gp,-1020 # 20000000 <NOTAS>
+ 338:	c1418593          	addi	a1,gp,-1004 # 20000010 <_ebss>
+ 33c:	4601                	li	a2,0
+ 33e:	00b55663          	bge	a0,a1,34a <handle_reset+0x40>
+ 342:	c110                	sw	a2,0(a0)
+ 344:	0511                	addi	a0,a0,4
+ 346:	feb54ee3          	blt	a0,a1,342 <handle_reset+0x38>
+ 34a:	61800513          	li	a0,1560
+ 34e:	c0418593          	addi	a1,gp,-1020 # 20000000 <NOTAS>
+ 352:	c0418613          	addi	a2,gp,-1020 # 20000000 <NOTAS>
+ 356:	00c58863          	beq	a1,a2,366 <handle_reset+0x5c>
+ 35a:	4114                	lw	a3,0(a0)
+ 35c:	c194                	sw	a3,0(a1)
+ 35e:	0511                	addi	a0,a0,4
+ 360:	0591                	addi	a1,a1,4
+ 362:	fec59ae3          	bne	a1,a2,356 <handle_reset+0x4c>
+	SysTick->CTLR = 1;
+ 366:	e000f7b7          	lui	a5,0xe000f
+ 36a:	4705                	li	a4,1
+ 36c:	c398                	sw	a4,0(a5)
+asm volatile(
+ 36e:	42c00793          	li	a5,1068
+ 372:	34179073          	csrw	mepc,a5
+ 376:	30200073          	mret
+
+0000037a <ADC1_2_IRQHandler>:
+
+// Return the Machine Exception Program Register (MEPC)
+static inline uint32_t __get_MEPC(void)
+{
+	uint32_t result;
+	__ASM volatile( ADD_ARCH_ZICSR "csrr %0," "mepc" : "=r"(result));
+ 37a:	34102573          	csrr	a0,mepc
+	PrintHex( __get_MEPC() ); // "addr2line -e debugprintfdemo.elf 0x000007e6" ---> debugprintfdemo.c:45
+ 37e:	3365                	jal	126 <PrintHex>
+	__ASM volatile( ADD_ARCH_ZICSR "csrr %0, mstatus": "=r"(result) );
+ 380:	30002573          	csrr	a0,mstatus
+	PrintHex( __get_MSTATUS() );
+ 384:	334d                	jal	126 <PrintHex>
+
+// Return the Machine Trap Value Register (MTVAL)
+static inline uint32_t __get_MTVAL(void)
+{
+	uint32_t result;
+	__ASM volatile( ADD_ARCH_ZICSR "csrr %0," "mtval" : "=r" (result) );
+ 386:	34302573          	csrr	a0,mtval
+	PrintHex( __get_MTVAL() );
+ 38a:	3b71                	jal	126 <PrintHex>
+	__ASM volatile( ADD_ARCH_ZICSR "csrr %0," "mcause": "=r"(result));
+ 38c:	34202573          	csrr	a0,mcause
+	PrintHex( __get_MCAUSE() );
+ 390:	3b59                	jal	126 <PrintHex>
+	while( (*DMDATA0) & 0x80 );
+ 392:	e0000737          	lui	a4,0xe0000
+ 396:	0f472783          	lw	a5,244(a4) # e00000f4 <_eusrstack+0xbffff0f4>
+ 39a:	0807f793          	andi	a5,a5,128
+ 39e:	ffe5                	bnez	a5,396 <ADC1_2_IRQHandler+0x1c>
+	*DMDATA0 = 0x0a85;
+ 3a0:	6785                	lui	a5,0x1
+ 3a2:	a8578793          	addi	a5,a5,-1403 # a85 <_data_lma+0x46d>
+ 3a6:	0ef72a23          	sw	a5,244(a4)
+	while( (*DMDATA0) & 0x80 );
+ 3aa:	e0000737          	lui	a4,0xe0000
+ 3ae:	0f472783          	lw	a5,244(a4) # e00000f4 <_eusrstack+0xbffff0f4>
+ 3b2:	0807f793          	andi	a5,a5,128
+ 3b6:	ffe5                	bnez	a5,3ae <ADC1_2_IRQHandler+0x34>
+	*DMDATA0 = 0xaaaaaa83;
+ 3b8:	aaaab7b7          	lui	a5,0xaaaab
+ 3bc:	a8378793          	addi	a5,a5,-1405 # aaaaaa83 <_eusrstack+0x8aaa9a83>
+ 3c0:	0ef72a23          	sw	a5,244(a4)
+	asm volatile( "1: j 1b" );
+ 3c4:	a001                	j	3c4 <ADC1_2_IRQHandler+0x4a>
+
+000003c6 <NMI_Handler>:
+	RCC->INTR |= RCC_CSSC;	// clear the clock security int flag
+ 3c6:	40021737          	lui	a4,0x40021
+ 3ca:	471c                	lw	a5,8(a4)
+ 3cc:	008006b7          	lui	a3,0x800
+ 3d0:	8fd5                	or	a5,a5,a3
+ 3d2:	c71c                	sw	a5,8(a4)
+
+000003d4 <SystemInit>:
+		FLASH->ACTLR = FLASH_ACTLR_LATENCY_0;               // +0 Cycle Latency
+	#endif
+#elif defined(CH32V00x)
+	// Per TRM
+	#if FUNCONF_SYSTEM_CORE_CLOCK > 25000000
+		FLASH->ACTLR = FLASH_ACTLR_LATENCY_2;
+ 3d4:	400227b7          	lui	a5,0x40022
+ 3d8:	4709                	li	a4,2
+ 3da:	c398                	sw	a4,0(a5)
+#elif defined(FUNCONF_USE_HSI) && FUNCONF_USE_HSI
+	#if defined(CH32V30x) || defined(CH32V20x) || defined(CH32L103) || defined(CH32V10x)
+		EXTEN->EXTEN_CTR |= EXTEN_PLL_HSI_PRE;
+	#endif
+	#if defined(FUNCONF_USE_PLL) && FUNCONF_USE_PLL
+		RCC->CFGR0 = BASE_CFGR0;
+ 3dc:	400217b7          	lui	a5,0x40021
+		RCC->CTLR  = BASE_CTLR | RCC_HSION | RCC_PLLON; 			// Use HSI, enable PLL.
+ 3e0:	01080737          	lui	a4,0x1080
+		RCC->CFGR0 = BASE_CFGR0;
+ 3e4:	0007a223          	sw	zero,4(a5) # 40021004 <_eusrstack+0x20020004>
+		RCC->CTLR  = BASE_CTLR | RCC_HSION | RCC_PLLON; 			// Use HSI, enable PLL.
+ 3e8:	08170713          	addi	a4,a4,129 # 1080081 <piano.c.9b0a1975+0x107d8a8>
+ 3ec:	c398                	sw	a4,0(a5)
+		FLASH->ACTLR = FLASH_ACTLR_LATENCY_0;
+	#endif
+#endif
+
+#ifndef CH5xx
+	RCC->INTR  = 0x009F0000;                               // Clear PLL, CSSC, HSE, HSI and LSI ready flags.
+ 3ee:	009f0737          	lui	a4,0x9f0
+ 3f2:	c798                	sw	a4,8(a5)
+#endif
+
+#if defined(FUNCONF_USE_PLL) && FUNCONF_USE_PLL && !defined(CH5xx)
+	while((RCC->CTLR & RCC_PLLRDY) == 0) {};                       	// Wait till PLL is ready
+ 3f4:	020006b7          	lui	a3,0x2000
+ 3f8:	40021737          	lui	a4,0x40021
+ 3fc:	431c                	lw	a5,0(a4)
+ 3fe:	8ff5                	and	a5,a5,a3
+ 400:	dff5                	beqz	a5,3fc <SystemInit+0x28>
+	#if defined(CH32H41x)
+		RCC->PLLCFGR |= RCC_SYSPLL_GATE;
+	#endif
+	uint32_t tmp32 = RCC->CFGR0 & ~(0x03);							// clr the SW
+ 402:	435c                	lw	a5,4(a4)
+	RCC->CFGR0 = tmp32 | RCC_SW_PLL;                       			// Select PLL as system clock source
+	while ((RCC->CFGR0 & (uint32_t)RCC_SWS) != (uint32_t)0x08); 	// Wait till PLL is used as system clock source
+ 404:	400216b7          	lui	a3,0x40021
+	uint32_t tmp32 = RCC->CFGR0 & ~(0x03);							// clr the SW
+ 408:	9bf1                	andi	a5,a5,-4
+	RCC->CFGR0 = tmp32 | RCC_SW_PLL;                       			// Select PLL as system clock source
+ 40a:	0027e793          	ori	a5,a5,2
+ 40e:	c35c                	sw	a5,4(a4)
+	while ((RCC->CFGR0 & (uint32_t)RCC_SWS) != (uint32_t)0x08); 	// Wait till PLL is used as system clock source
+ 410:	4721                	li	a4,8
+ 412:	42dc                	lw	a5,4(a3)
+ 414:	8bb1                	andi	a5,a5,12
+ 416:	fee79ee3          	bne	a5,a4,412 <SystemInit+0x3e>
+	*DMDATA1 = 0x00;
+ 41a:	e00007b7          	lui	a5,0xe0000
+ 41e:	0e07ac23          	sw	zero,248(a5) # e00000f8 <_eusrstack+0xbffff0f8>
+	*DMDATA0 = 0x80;
+ 422:	08000713          	li	a4,128
+ 426:	0ee7aa23          	sw	a4,244(a5)
+	SetupDebugPrintf();
+#endif
+#if defined(FUNCONF_SUPPORT_CONSTRUCTORS) && FUNCONF_SUPPORT_CONSTRUCTORS
+	CallConstructors();
+#endif
+}
+ 42a:	8082                	ret
+
+0000042c <main>:
+		Delay_Ms(200); // debounce
+	}
+}
+
+// Programa principal
+int main() {
+ 42c:	1141                	addi	sp,sp,-16
+ 42e:	c606                	sw	ra,12(sp)
+ 430:	c422                	sw	s0,8(sp)
+ 432:	c226                	sw	s1,4(sp)
+	// 48MHz internal clock
+	SystemInit();
+	Delay_Ms(10);
+ 434:	643d                	lui	s0,0xf
+	SystemInit();
+ 436:	3f79                	jal	3d4 <SystemInit>
+	Delay_Ms(10);
+ 438:	a6040513          	addi	a0,s0,-1440 # ea60 <piano.c.9b0a1975+0xc287>
+ 43c:	3381                	jal	17c <DelaySysTick>
+
+	// Inicia LED de debug
+  RCC->APB2PCENR |= RCC_APB2Periph_GPIOC;
+ 43e:	40021737          	lui	a4,0x40021
+ 442:	4f1c                	lw	a5,24(a4)
+	GPIOC->CFGLR &= ~(0xf<<(4*6));
+ 444:	f1000637          	lui	a2,0xf1000
+ 448:	167d                	addi	a2,a2,-1
+  RCC->APB2PCENR |= RCC_APB2Periph_GPIOC;
+ 44a:	0107e793          	ori	a5,a5,16
+ 44e:	cf1c                	sw	a5,24(a4)
+	GPIOC->CFGLR &= ~(0xf<<(4*6));
+ 450:	400117b7          	lui	a5,0x40011
+ 454:	4394                	lw	a3,0(a5)
+	AFIO->PCFR1 &= ~(0x07 << 14);
+ 456:	7591                	lui	a1,0xfffe4
+ 458:	15fd                	addi	a1,a1,-1
+	GPIOC->CFGLR &= ~(0xf<<(4*6));
+ 45a:	8ef1                	and	a3,a3,a2
+ 45c:	c394                	sw	a3,0(a5)
+	GPIOC->CFGLR |= (GPIO_Speed_10MHz | GPIO_CNF_OUT_PP)<<(4*6);
+ 45e:	4394                	lw	a3,0(a5)
+ 460:	01000637          	lui	a2,0x1000
+	Delay_Ms(10);
+ 464:	a6040513          	addi	a0,s0,-1440
+	GPIOC->CFGLR |= (GPIO_Speed_10MHz | GPIO_CNF_OUT_PP)<<(4*6);
+ 468:	8ed1                	or	a3,a3,a2
+ 46a:	c394                	sw	a3,0(a5)
+	RCC->APB2PCENR |= RCC_APB2Periph_GPIOC | RCC_APB2Periph_AFIO;
+ 46c:	4f14                	lw	a3,24(a4)
+ 46e:	0116e693          	ori	a3,a3,17
+ 472:	cf14                	sw	a3,24(a4)
+	RCC->APB1PCENR |= RCC_APB1Periph_TIM2;
+ 474:	4f54                	lw	a3,28(a4)
+ 476:	0016e693          	ori	a3,a3,1
+ 47a:	cf54                	sw	a3,28(a4)
+	AFIO->PCFR1 &= ~(0x07 << 14);
+ 47c:	400106b7          	lui	a3,0x40010
+ 480:	46d0                	lw	a2,12(a3)
+ 482:	8e6d                	and	a2,a2,a1
+ 484:	c6d0                	sw	a2,12(a3)
+	AFIO->PCFR1 |= (0x03 << 14);
+ 486:	46d0                	lw	a2,12(a3)
+ 488:	65b1                	lui	a1,0xc
+ 48a:	8e4d                	or	a2,a2,a1
+ 48c:	c6d0                	sw	a2,12(a3)
+	GPIOC->CFGLR &= 0x0FFFFFFF; //~(0xf<<(4*7));
+ 48e:	4394                	lw	a3,0(a5)
+	GPIOC->CFGLR |= 0x90000000;  //(GPIO_Speed_50MHz | GPIO_CNF_OUT_PP_AF)<<(4*7);
+ 490:	90000637          	lui	a2,0x90000
+	TIM2->CHCTLR1 |= TIM2_CHCTLR1_OC2M_2 | TIM2_CHCTLR1_OC2M_1 | TIM2_CHCTLR1_OC2PE;
+ 494:	659d                	lui	a1,0x7
+	GPIOC->CFGLR &= 0x0FFFFFFF; //~(0xf<<(4*7));
+ 496:	0692                	slli	a3,a3,0x4
+ 498:	8291                	srli	a3,a3,0x4
+ 49a:	c394                	sw	a3,0(a5)
+	GPIOC->CFGLR |= 0x90000000;  //(GPIO_Speed_50MHz | GPIO_CNF_OUT_PP_AF)<<(4*7);
+ 49c:	4394                	lw	a3,0(a5)
+	TIM2->CHCTLR1 |= TIM2_CHCTLR1_OC2M_2 | TIM2_CHCTLR1_OC2M_1 | TIM2_CHCTLR1_OC2PE;
+ 49e:	80058593          	addi	a1,a1,-2048 # 6800 <piano.c.9b0a1975+0x4027>
+	GPIOC->CFGLR |= 0x90000000;  //(GPIO_Speed_50MHz | GPIO_CNF_OUT_PP_AF)<<(4*7);
+ 4a2:	8ed1                	or	a3,a3,a2
+ 4a4:	c394                	sw	a3,0(a5)
+	TIM2->PSC = 99;  		// actual divider is PSC+1
+ 4a6:	06300613          	li	a2,99
+ 4aa:	400006b7          	lui	a3,0x40000
+ 4ae:	02c69423          	sh	a2,40(a3) # 40000028 <_eusrstack+0x1ffff028>
+	TIM2->CHCTLR1 |= TIM2_CHCTLR1_OC2M_2 | TIM2_CHCTLR1_OC2M_1 | TIM2_CHCTLR1_OC2PE;
+ 4b2:	0186d603          	lhu	a2,24(a3)
+ 4b6:	0642                	slli	a2,a2,0x10
+ 4b8:	8241                	srli	a2,a2,0x10
+ 4ba:	8e4d                	or	a2,a2,a1
+ 4bc:	0642                	slli	a2,a2,0x10
+ 4be:	8241                	srli	a2,a2,0x10
+ 4c0:	00c69c23          	sh	a2,24(a3)
+	TIM2->CTLR1 |=  TIM2_CTLR1_ARPE;
+ 4c4:	0006d603          	lhu	a2,0(a3)
+ 4c8:	0642                	slli	a2,a2,0x10
+ 4ca:	8241                	srli	a2,a2,0x10
+ 4cc:	08066613          	ori	a2,a2,128
+ 4d0:	00c69023          	sh	a2,0(a3)
+	TIM2->CCER |= TIM2_CCER_CC2E;
+ 4d4:	0206d603          	lhu	a2,32(a3)
+ 4d8:	0642                	slli	a2,a2,0x10
+ 4da:	8241                	srli	a2,a2,0x10
+ 4dc:	01066613          	ori	a2,a2,16
+ 4e0:	02c69023          	sh	a2,32(a3)
+	RCC->CFGR0 = (RCC->CFGR0 & ~(RCC_ADCPRE | RCC_CFGR0_ADC_CLK_MODE | RCC_CFGR0_ADC_CLK_ADJ)) | RCC_ADCPRE_DIV2;
+ 4e4:	4354                	lw	a3,4(a4)
+ 4e6:	6fff0637          	lui	a2,0x6fff0
+ 4ea:	7ff60613          	addi	a2,a2,2047 # 6fff07ff <_eusrstack+0x4ffef7ff>
+ 4ee:	8ef1                	and	a3,a3,a2
+ 4f0:	c354                	sw	a3,4(a4)
+	RCC->PB2PCENR |= RCC_ADCEN | RCC_IOPDEN;
+ 4f2:	4f14                	lw	a3,24(a4)
+	GPIOA->CFGLR &= ~(GPIO_CFGLR_MASK<<(4*2));
+ 4f4:	767d                	lui	a2,0xfffff
+ 4f6:	0ff60613          	addi	a2,a2,255 # fffff0ff <_eusrstack+0xdfffe0ff>
+	RCC->PB2PCENR |= RCC_ADCEN | RCC_IOPDEN;
+ 4fa:	2206e693          	ori	a3,a3,544
+ 4fe:	cf14                	sw	a3,24(a4)
+	GPIOA->CFGLR &= ~(GPIO_CFGLR_MASK<<(4*2));
+ 500:	8007a683          	lw	a3,-2048(a5) # 40010800 <_eusrstack+0x2000f800>
+ 504:	8ef1                	and	a3,a3,a2
+ 506:	80d7a023          	sw	a3,-2048(a5)
+	GPIOA->CFGLR |= (GPIO_CFGLR_IN_ANALOG<<(4*2));
+ 50a:	8007a683          	lw	a3,-2048(a5)
+ 50e:	80d7a023          	sw	a3,-2048(a5)
+	GPIOA->CFGLR &= ~(GPIO_CFGLR_MASK<<(4*1));
+ 512:	8007a683          	lw	a3,-2048(a5)
+ 516:	f0f6f693          	andi	a3,a3,-241
+ 51a:	80d7a023          	sw	a3,-2048(a5)
+	GPIOA->CFGLR |= (GPIO_CFGLR_IN_ANALOG<<(4*1));
+ 51e:	8007a683          	lw	a3,-2048(a5)
+ 522:	80d7a023          	sw	a3,-2048(a5)
+	RCC->PB2PRSTR |= RCC_ADC1RST;
+ 526:	475c                	lw	a5,12(a4)
+	ADC1->CTLR2 = ADC1->CTLR2 & ~ADC_EXTSEL_SWSTART;
+ 528:	fff206b7          	lui	a3,0xfff20
+ 52c:	16fd                	addi	a3,a3,-1
+	RCC->PB2PRSTR |= RCC_ADC1RST;
+ 52e:	2007e793          	ori	a5,a5,512
+ 532:	c75c                	sw	a5,12(a4)
+	RCC->PB2PRSTR &= ~RCC_ADC1RST;
+ 534:	475c                	lw	a5,12(a4)
+ 536:	dff7f793          	andi	a5,a5,-513
+ 53a:	c75c                	sw	a5,12(a4)
+	ADC1->CTLR2 |= ADC_ADON;
+ 53c:	400127b7          	lui	a5,0x40012
+ 540:	4087a703          	lw	a4,1032(a5) # 40012408 <_eusrstack+0x20011408>
+ 544:	00176713          	ori	a4,a4,1
+ 548:	40e7a423          	sw	a4,1032(a5)
+	ADC1->RSQR1 = 0;
+ 54c:	4207a623          	sw	zero,1068(a5)
+	ADC1->RSQR2 = 0;
+ 550:	4207a823          	sw	zero,1072(a5)
+	ADC1->SAMPTR2 &= ~(ADC_SMP0<<(3*0));
+ 554:	4107a703          	lw	a4,1040(a5)
+ 558:	9b61                	andi	a4,a4,-8
+ 55a:	40e7a823          	sw	a4,1040(a5)
+	ADC1->SAMPTR2 |= 7<<(3*0);	// 0:7 => 3/9/15/30/43/57/73/241 cycles
+ 55e:	4107a703          	lw	a4,1040(a5)
+ 562:	00776713          	ori	a4,a4,7
+ 566:	40e7a823          	sw	a4,1040(a5)
+	ADC1->SAMPTR2 &= ~(ADC_SMP0<<(3*1));
+ 56a:	4107a703          	lw	a4,1040(a5)
+ 56e:	fc777713          	andi	a4,a4,-57
+ 572:	40e7a823          	sw	a4,1040(a5)
+	ADC1->SAMPTR2 |= 7<<(3*1);	// 0:7 => 3/9/15/30/43/57/73/241 cycles
+ 576:	4107a703          	lw	a4,1040(a5)
+ 57a:	03876713          	ori	a4,a4,56
+ 57e:	40e7a823          	sw	a4,1040(a5)
+	ADC1->CTLR2 = ADC1->CTLR2 & ~ADC_EXTSEL_SWSTART;
+ 582:	4087a703          	lw	a4,1032(a5)
+ 586:	8f75                	and	a4,a4,a3
+ 588:	40e7a423          	sw	a4,1032(a5)
+	ADC1->RSQR3 = canal;	// 0-9 for 8 ext inputs and two internals
+ 58c:	4207aa23          	sw	zero,1076(a5)
+	Delay_Ms(10);
+ 590:	36f5                	jal	17c <DelaySysTick>
+	adc_get();  // despreza a primeira leitura após mudar de canal
+ 592:	31b5                	jal	1fe <adc_get>
+	// Inicia ADC
+	adc_init();
+
+  // Testa se quer calibrar (tecla apertada ao ligar)
+	sel_adc_channel(0);  // Leitura de tecla
+	int tecla = le_tecla();
+ 594:	39cd                	jal	286 <le_tecla>
+	if (tecla != 0) {
+ 596:	e51d                	bnez	a0,5c4 <main+0x198>
+			if (tecla == 0) {
+				para_nota();
+			} else {
+				toca_nota(tecla-1);
+			}
+			Delay_Ms(200); // debounce
+ 598:	001254b7          	lui	s1,0x125
+	ajusta_notas();
+ 59c:	3b01                	jal	2ac <ajusta_notas>
+	int tecla_ant = 0;
+ 59e:	4401                	li	s0,0
+			Delay_Ms(200); // debounce
+ 5a0:	f8048493          	addi	s1,s1,-128 # 124f80 <piano.c.9b0a1975+0x1227a7>
+		tecla = le_tecla();
+ 5a4:	c022                	sw	s0,0(sp)
+ 5a6:	31c5                	jal	286 <le_tecla>
+		if (tecla != tecla_ant) {
+ 5a8:	4782                	lw	a5,0(sp)
+		tecla = le_tecla();
+ 5aa:	842a                	mv	s0,a0
+		if (tecla != tecla_ant) {
+ 5ac:	fea78ce3          	beq	a5,a0,5a4 <main+0x178>
+			if (tecla == 0) {
+ 5b0:	e121                	bnez	a0,5f0 <main+0x1c4>
+				para_nota();
+ 5b2:	3931                	jal	1ce <para_nota>
+			Delay_Ms(200); // debounce
+ 5b4:	8526                	mv	a0,s1
+ 5b6:	36d9                	jal	17c <DelaySysTick>
+ 5b8:	b7f5                	j	5a4 <main+0x178>
+		Delay_Ms(200); // debounce
+ 5ba:	00125537          	lui	a0,0x125
+ 5be:	f8050513          	addi	a0,a0,-128 # 124f80 <piano.c.9b0a1975+0x1227a7>
+ 5c2:	3e6d                	jal	17c <DelaySysTick>
+	while (le_tecla() != 0) {
+ 5c4:	31c9                	jal	286 <le_tecla>
+ 5c6:	f975                	bnez	a0,5ba <main+0x18e>
+	while (le_tecla() == 0) {
+ 5c8:	397d                	jal	286 <le_tecla>
+ 5ca:	c911                	beqz	a0,5de <main+0x1b2>
+	para_nota();
+ 5cc:	3109                	jal	1ce <para_nota>
+	while (le_tecla() != 0) {
+ 5ce:	3965                	jal	286 <le_tecla>
+ 5d0:	d561                	beqz	a0,598 <main+0x16c>
+		Delay_Ms(200); // debounce
+ 5d2:	00125537          	lui	a0,0x125
+ 5d6:	f8050513          	addi	a0,a0,-128 # 124f80 <piano.c.9b0a1975+0x1227a7>
+ 5da:	364d                	jal	17c <DelaySysTick>
+ 5dc:	bfcd                	j	5ce <main+0x1a2>
+		ajusta_notas();
+ 5de:	31f9                	jal	2ac <ajusta_notas>
+		toca_nota(0); // DO
+ 5e0:	4501                	li	a0,0
+ 5e2:	3e45                	jal	192 <toca_nota>
+		Delay_Ms(200);
+ 5e4:	00125537          	lui	a0,0x125
+ 5e8:	f8050513          	addi	a0,a0,-128 # 124f80 <piano.c.9b0a1975+0x1227a7>
+ 5ec:	3e41                	jal	17c <DelaySysTick>
+ 5ee:	bfe9                	j	5c8 <main+0x19c>
+				toca_nota(tecla-1);
+ 5f0:	157d                	addi	a0,a0,-1
+ 5f2:	3645                	jal	192 <toca_nota>
+ 5f4:	b7c1                	j	5b4 <main+0x188>
+	...
+
+000005f8 <NOTAS_DEFAULT>:
+ 5f8:	0396 0332 02d8 02b0 0264 0221 01e6 0000     ..2.....d.!.....
+
+00000608 <limiar>:
+ 608:	0ccd 08f6 0615 0452 035c 023e 00fa 0000     ......R.\.>.....
